@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name:      myfrontend-service
+  namespace: updates-lab 
+spec: 
+  ports:
+    - targetPort: 8080
+      port: 80
+      nodePort: 30030
+  selector:
+      app: frontend-app
